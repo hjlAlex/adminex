@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	  	<meta name="description" content="">
+	  	<meta name="author" content="ThemeBucket">
+	  	<link rel="shortcut icon" href="#" type="image/png">
+	  	<title>导表页面</title>
+	</head>
+	<body class="sticky-header">
+		<table id="userTable" class="table table-border table-bordered table-bg">
+			<thead>
+				<tr>
+					<th scope="col" colspan="7">
+						<span class="l">用户列表</span>
+						<span class="r">共有数据：<strong>15</strong> 条</span> 
+					</th>
+				</tr>
+				<tr class="text-c">
+					<th width="25"><input id="chkAll" value="" type="checkbox"></th>
+					<th width="40">ID</th>
+					<th width="100">登录账号</th>
+					<th width="100">昵称</th>
+					<th width="100">所属组</th>
+					<th width="100">创建时间</th>
+					<th width="120">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="text-c">
+					<td width="25">
+					</td>
+					<td width="40">1</td>
+					<td width="100">admin</td>
+					<td width="100">胡远志</td>
+					<td width="100"></td>
+					<td width="100">2016-1-9 11:44:28</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="2" type="checkbox">
+					</td>
+					<td width="40">2</td>
+					<td width="100">zengweilin</td>
+					<td width="100">曾伟林</td>
+					<td width="100">运维组</td>
+					<td width="100">2016-1-9 15:44:37</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','2')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(2);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','2');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="3" type="checkbox">
+					</td>
+					<td width="40">3</td>
+					<td width="100">shizhihong</td>
+					<td width="100">施志宏</td>
+					<td width="100">运维组</td>
+					<td width="100">2016-1-9 16:20:29</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','3')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(3);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','3');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="4" type="checkbox">
+					</td>
+					<td width="40">4</td>
+					<td width="100">chenjiebo</td>
+					<td width="100">陈杰波</td>
+					<td width="100">管理员组</td>
+					<td width="100">2016-1-11 9:38:18</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','4')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(4);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="5" type="checkbox">
+					</td>
+					<td width="40">5</td>
+					<td width="100">tazyong</td>
+					<td width="100">谭智勇</td>
+					<td width="100">市场运营组</td>
+					<td width="100">2016-1-13 11:19:25</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','5')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(5);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','5');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="6" type="checkbox">
+					</td>
+					<td width="40">6</td>
+					<td width="100">lihaibin</td>
+					<td width="100">李海斌</td>
+					<td width="100">市场运营组</td>
+					<td width="100">2016-1-13 11:32:03</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','6')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(6);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','6');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="7" type="checkbox">
+					</td>
+					<td width="40">7</td>
+					<td width="100">yaowenhao</td>
+					<td width="100">姚文浩</td>
+					<td width="100">管理员组</td>
+					<td width="100">2016-1-13 13:52:51</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','7')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(7);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="8" type="checkbox">
+					</td>
+					<td width="40">8</td>
+					<td width="100">huangjielong</td>
+					<td width="100">黄杰龙</td>
+					<td width="100">管理员组</td>
+					<td width="100">2016-1-13 16:48:08</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','8')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(8);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="9" type="checkbox">
+					</td>
+					<td width="40">9</td>
+					<td width="100">anson</td>
+					<td width="100">林墉</td>
+					<td width="100">管理员组</td>
+					<td width="100">2016-1-15 10:17:04</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','9')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(9);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="10" type="checkbox">
+					</td>
+					<td width="40">10</td>
+					<td width="100">yedekai</td>
+					<td width="100">叶德凯</td>
+					<td width="100">市场运营组</td>
+					<td width="100">2016-1-15 11:37:22</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','10')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(10);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','10');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="11" type="checkbox">
+					</td>
+					<td width="40">11</td>
+					<td width="100">gaoping</td>
+					<td width="100">高平</td>
+					<td width="100">客服组</td>
+					<td width="100">2016-1-15 15:29:27</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','11')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(11);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','11');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="12" type="checkbox">
+					</td>
+					<td width="40">12</td>
+					<td width="100">linxiaoming</td>
+					<td width="100">林晓明</td>
+					<td width="100">客服组</td>
+					<td width="100">2016-1-15 15:29:56</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','12')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(12);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','12');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="13" type="checkbox">
+					</td>
+					<td width="40">13</td>
+					<td width="100">lishunda</td>
+					<td width="100">李顺达</td>
+					<td width="100">客服组</td>
+					<td width="100">2016-1-15 15:32:45</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','13')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(13);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','13');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="14" type="checkbox">
+					</td>
+					<td width="40">14</td>
+					<td width="100">dingzheshi</td>
+					<td width="100">丁哲仕</td>
+					<td width="100">市场运营组</td>
+					<td width="100">2016-1-18 10:14:49</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','14')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(14);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','14');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+				<tr class="text-c">
+					<td width="25">
+						<input id="chkAll" name="uid" value="15" type="checkbox">
+					</td>
+					<td width="40">15</td>
+					<td width="100">lijia</td>
+					<td width="100">李佳</td>
+					<td width="100">市场运营组</td>
+					<td width="100">2016-2-2 9:27:26</td>
+					<td class="td-manage">
+						<a title="编辑" href="javascript:;" onclick="user_edit('用户编辑','to_update_user.html','15')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a title="删除" href="javascript:;" onclick="javascript:user_delete(15);" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a title="权限" href="javascript:;" onclick="javascript:user_auth('用户权限管理','user_auth.html','15');" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont"></i></a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td scope="col" colspan="7" style="text-align: center;">
+							<a class="btn btn-primary radius">首页</a>
+						
+						
+						
+							&nbsp;&nbsp;
+							<a class="btn btn-primary radius">尾页</a>
+						&nbsp;&nbsp;
+						<a class="btn btn-primary radius" style="text-decoration: none;">
+							当前第&nbsp;
+							<select onchange="javascript:goPage(this.value,20);">
+										<option value="1" selected="selected">1</option>
+							</select>
+							&nbsp;页&nbsp;&nbsp;
+							共&nbsp;1&nbsp;页
+						</a><a>
+						&nbsp;&nbsp;
+						</a><a class="btn btn-primary radius" style="text-decoration: none;">
+							每页显示&nbsp;
+							<select onchange="javascript:goPage(1,this.value);">
+										<option value="10">10</option>
+										<option value="20" selected="selected">20</option>
+										<option value="30">30</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+										<option value="200">200</option>
+							</select>
+							&nbsp;
+						</a><a>
+					</a></td>
+				</tr>
+			</tfoot>
+		</table>
+		<button type="button" onclick="javascript:toExcel();">导出</button>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="excel/tableExportNew.js"></script>		
+		<script type="text/javascript">
+			function toExcel(){
+				$("#userTable").tableExportNew({			
+					type:'excel',
+					ignoreColumn:[0,6],
+					escape:'false'
+				});
+			}
+		</script>
+	</body>
+</html>

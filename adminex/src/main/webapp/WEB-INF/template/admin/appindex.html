@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="${base}/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="${base}/sui-mobile/dist/css/sm.min.css">
+    <link rel="stylesheet" href="${base}/sui-mobile/dist/css/sm-extend.min.css">
+
+  </head>
+  <body>
+
+    <div class="page-group">
+        <!-- 你的html代码 -->
+        <div class="page page-current" id="index">
+            <nav class="bar bar-tab">
+                <a class="tab-item active" datalink="http://sui.ctolog.com/demos">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item" datalink="http://www.baidu.com">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我</span>
+                </a>
+                <a class="tab-item" datalink="http://tool.oschina.net">
+                    <span class="icon icon-star"></span>
+                    <span class="tab-label">收藏</span>
+                </a>
+                <a class="tab-item" datalink="http://tool.oschina.net">
+                    <span class="icon icon-settings"></span>
+                    <span class="tab-label">设置</span>
+                </a>                                                                            
+            </nav>
+            <div class="content">
+                <!-- 这里是页面内容区 -->
+                <iframe id="iframe" width="100%" height="100%" frameborder="0" scrolling="auto" src="http://sui.ctolog.com/demos"></iframe>                            
+            </div>
+        </div>                     
+    </div>
+
+    <script type='text/javascript' src='${base}/sui-mobile/dist/js/jquery.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='${base}/sui-mobile/dist/js/sm.js' charset='utf-8'></script>
+    <script type='text/javascript' src='${base}/sui-mobile/dist/js/sm-extend.js' charset='utf-8'></script>
+    <script>        
+      $.init();
+      $(function(){        
+        $(".tab-item").click(function(event) {
+          // var title = $(this).children('span').eq(1).html();
+          // $("#title").html(title);
+          var url = $(this).attr('datalink');          
+          $('#iframe', window.parent.document).attr('src', url);
+          var iframe = $('#iframe', window.parent.document)[0];
+          if (iframe.attachEvent){             
+            $.showPreloader();            
+            iframe.attachEvent("onload", function(){ 
+              $.hidePreloader(); 
+            });             
+          } else {             
+            $.showPreloader();
+            iframe.onload = function(){ 
+              $.hidePreloader(); 
+            };             
+          } 
+          $(".tab-item").removeClass('active');
+          $(this).addClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>

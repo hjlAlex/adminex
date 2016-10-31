@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="ThemeBucket">
+	    <link rel="shortcut icon" href="${base}/favicon.ico" type="image/png">
+	
+	    <title>Login</title>
+	
+	    <link href="${base}/css/style.css" rel="stylesheet">
+	    <link href="${base}/css/style-responsive.css" rel="stylesheet">
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	    <script src="${base}/js/html5shiv.js"></script>
+	    <script src="${base}/js/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body class="login-body">
+	
+		<div class="container">
+		
+		    <form class="form-signin" action="${base}/admin/login" method="post">
+		        <div class="form-signin-heading text-center">
+		            <h1 class="sign-title">Sign In</h1>
+		            <img src="${base}/images/login-logo.png" alt=""/>
+		        </div>
+		        <div class="login-wrap">
+		        	<div class="form-group">
+                        <div class="iconic-input">
+                            <i class="fa fa-user" style="margin-top:12px;"></i>
+                            <input type="text" name="name" class="form-control" placeholder="left icon" style="background: none;" autofocus>
+                        </div>
+                    </div>
+		            <div class="form-group">
+                        <div class="iconic-input">
+                            <i class="fa fa-lock" style="margin-top:12px;"></i>
+                            <input type="password" name="password" class="form-control" placeholder="left icon" style="background: none;">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="code" class="form-control" placeholder="left icon" style="background: none;">
+                            <span class="input-group-addon" style="padding:0px;border: 0px;background: none;border-radius:0px;">
+                            	<img id="code" src="${base}/admin/code?date=$dateUtils.getNow()" onclick="javascript:refreshCode();" style="margin-top:-14px;">
+                            </span>
+                        </div>
+                    </div>
+                    #if(${tip})
+                    <label class="form-control alert alert-danger text-center" style="margin-top: -12px;">${tip}</label>
+                    <button class="btn btn-lg btn-login btn-block" style="margin-top: -3px;" type="submit">
+		                <i class="fa fa-check"></i>
+		            </button>
+		            #else
+		            <button class="btn btn-lg btn-login btn-block" style="margin-top: -14px;" type="submit">
+		                <i class="fa fa-check"></i>
+		            </button>
+                    #end
+		            <span style="width:100%;height: 10px;margin-top: 15px;">&nbsp;</span>
+		        </div>
+		
+		        <!-- Modal -->
+		        <!-- modal -->
+		    </form>
+		
+		</div>	
+		<!-- Placed js at the end of the document so the pages load faster -->
+		
+		<!-- Placed js at the end of the document so the pages load faster -->
+		<script src="${base}/js/jquery-1.10.2.min.js"></script>
+		<script src="${base}/js/bootstrap.min.js"></script>
+		<script src="${base}/js/modernizr.min.js"></script>
+		<script type="text/javascript">
+			function refreshCode(){
+				var now = new Date().getTime();
+				var url = "${base}/admin/code?date="+now;
+				jQuery("#code").attr("src",url);
+			}
+		</script>
+	</body>
+</html>
