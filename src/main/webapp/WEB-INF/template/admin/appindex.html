@@ -46,11 +46,8 @@
     <script type='text/javascript' src='${base}/sui-mobile/dist/js/sm.js' charset='utf-8'></script>
     <script type='text/javascript' src='${base}/sui-mobile/dist/js/sm-extend.js' charset='utf-8'></script>
     <script>        
-      $.init();
       $(function(){        
         $(".tab-item").click(function(event) {
-          // var title = $(this).children('span').eq(1).html();
-          // $("#title").html(title);
           var url = $(this).attr('datalink');          
           $('#iframe', window.parent.document).attr('src', url);
           var iframe = $('#iframe', window.parent.document)[0];
@@ -69,6 +66,7 @@
           $(this).addClass('active');
         });
       });
+      $.init();
     </script>
   </body>
 </html>

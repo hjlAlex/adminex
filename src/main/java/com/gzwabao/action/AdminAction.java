@@ -82,6 +82,13 @@ public class AdminAction {
 
 	}
 
+	@Filters
+	@At("/refresh")
+	@Ok("vm:template.admin.refresh")
+	public void refresh() {
+
+	}
+
 	// =============用户业务相关开始=============
 	/**
 	 * 获取用户列表
