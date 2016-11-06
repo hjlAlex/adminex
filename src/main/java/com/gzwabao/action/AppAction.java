@@ -16,13 +16,14 @@ import com.gzwabao.service.ModuleService;
 import com.gzwabao.service.PageService;
 
 /**
+ * 手机客户端页面控制层
  * 
  * @since 2015年11月5日 下午5:45:16
  * @author Alex
  */
 @IocBean
-@At({ "/", "/index" })
-public class FrontAction {
+@At({ "/" })
+public class AppAction {
 
 	@Inject(value = "pageService")
 	private PageService pageService;
@@ -39,12 +40,32 @@ public class FrontAction {
 	 * @return
 	 */
 	@At("")
-	@Ok("vm:template.index")
+	@Ok("vm:template.app.appindex")
 	public Map<String, Module> index() {
-		Page index = pageService.getPageByStrId("index");
-		if (null != index) {
-			return moduleService.getModuleMap(index.getId());
-		}
+		/*
+		 * Page index = pageService.getPageByStrId("index"); if (null != index)
+		 * { return moduleService.getModuleMap(index.getId()); }
+		 */
+		return null;
+	}
+
+	@At("/new_product")
+	@Ok("vm:template.app.new_product")
+	public Map<String, Module> newProduct() {
+		/*
+		 * Page index = pageService.getPageByStrId("index"); if (null != index)
+		 * { return moduleService.getModuleMap(index.getId()); }
+		 */
+		return null;
+	}
+
+	@At("/detail")
+	@Ok("vm:template.app.detail")
+	public Map<String, Module> detail() {
+		/*
+		 * Page index = pageService.getPageByStrId("index"); if (null != index)
+		 * { return moduleService.getModuleMap(index.getId()); }
+		 */
 		return null;
 	}
 

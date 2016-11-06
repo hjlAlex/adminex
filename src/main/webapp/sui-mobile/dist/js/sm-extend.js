@@ -3374,3 +3374,22 @@ Swiper
     };
 
 }(jQuery);
+
+function addNum(){
+	var product_num = $("#product_num").val();
+	product_num = parseInt(product_num)+1;        
+	$("#product_num").val(product_num);        
+	var total = "￥"+parseInt(product_num * 5)+"元";
+	$("#total").html(total);
+}
+function deleteNum(){
+    var product_num = $("#product_num").val();
+    product_num = parseInt(product_num)-1;
+    if(product_num <= 0){
+       $.alert('数量不能低于0!');
+       return;
+    }  
+    $("#product_num").val(product_num);
+    var total = "￥"+parseInt(product_num * 5)+"元";
+    $("#total").html(total);
+}
