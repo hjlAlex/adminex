@@ -6,7 +6,7 @@ var ioc = {
 			depose : "close"
 		},
 		fields : {
-			url : "jdbc:mysql://127.0.0.1:3306/adminex?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false",
+			url : "jdbc:mysql://192.168.1.116:3306/adminex?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false",
 			username : "root",
 			password : "",
 			testWhileIdle : true,
