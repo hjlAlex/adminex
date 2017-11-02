@@ -8,7 +8,7 @@ var ioc = {
 		fields : {
 			url : "jdbc:mysql://127.0.0.1:3306/adminex?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false",
 			username : "root",
-			password : "root",
+			password : "",
 			testWhileIdle : true,
 			validationQuery : "select 1",
 			maxActive : 100,
